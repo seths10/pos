@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>POS</title>
+
+    <!-- Bootstrap styles for this project-->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Script for printing -->
+    <script>
+        function printContent(el) {
+            var restorepage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
+
+</head>
+
+<div id="wrapper">
+    <div class="sidebar sidebar-dark bg-primary">
+
+        <form action="home.php" method="GET">
+            <li class="nav-item action">
+
+                <center>
+                    <img src="./image/logo.jpg" class="img-responsive img-thumbnail" width="90" height="70">
+                </center>
+                <small class="nav-link text-center font-weight-bold">DASHBOARD</small>
+            </li>
+            <li class="nav-item active">
+                <hr>
+                <button type="submit" name="btnService" class="btn nav-link bg-gradient-primary ">SERVICE INFO</button>
+
+                <button type="submit" name="btnProductDefinition" class="btn nav-link bg-gradient-primary ">PRODUCT DEINITION</button>
+
+                <button type="submit" name="btnEmployeeAttendance" class="btn btn-block nav-link bg-gradient-primary">ATTENDANCE</button>
+
+                <button type="submit" name="btnOrder" class="btn nav-link bg-gradient-primary ">ORDER</button>
+
+                <button type="submit" name="btnReport" class="btn nav-link bg-gradient-primary ">REPORT</button>
+
+                <button type="submit" name="btnConfiguration" class="btn nav-link bg-gradient-primary ">CONFIGURATION</button>
+
+                <button type="submit" name="btnLogout" class="btn nav-link bg-gradient-primary ">LOGOUT</button>
+            </li>
+        </form>
+    </div>
+
+    <body>
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to logout your account.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-info" href="index.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-wrapper">
+            <nav class="navbar bg-white topbar navbar-fixed-top mb-4 shadow static-top ">
+                <h4>POS</h4>
+                <small class="text-right"><a href="index.html">logout</a></small>
+            </nav>
+
+
+            <!-- Bootstrap core JavaScript-->
+            <script src="./bootstrap/vendor/jquery/jquery.min.js"></script>
+            <script src="../bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Core plugin JavaScript-->
+            <script src="./bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+            <script src="./bootstrap/js/jquery.js"></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>
